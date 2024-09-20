@@ -1,7 +1,8 @@
-tasks = []
+tasks = [] #Parent Variable
 
 print("\n\nWelcome To Task Manager :)\n")
 
+#Function Definitions
 def addTask(): 
     new = input("Enter the Task : ")
     tasks.append(new)
@@ -23,33 +24,36 @@ def removeTask():
     except:
         print("Task not found!!\n")
 
-
+# Main Function
 while True:
+
+    #Starting Display
     print("\nPick One Action (Number Only): ")
     print("--------------------------------------------")
     print("1. Add a New Task")
     print("2. Delete a Task")
     print("3. List Of My Tasks")
     print("4. Exit Task Manager")
-    
+
+    #Actions 
     try:
         option = int(input("\nYour Choice : "))
-        if option == 1:
+        if option == 1: #Task Addition
             print("Processing.....\n")
             addTask()
             continue
-        elif option == 2:
+        elif option == 2: #Task Removal
             print("Processing.....\n")
             removeTask()
             continue
-        elif option == 3:
+        elif option == 3: #Show Task
             print("Processing.....\n")
             print("--------------------------------------------")
             print("Current Tasks : ")
             myTask()
             print("--------------------------------------------")
             continue
-        elif option == 4:
+        elif option == 4: #Exit
             print("Thank You :) ")
             break
         else:
