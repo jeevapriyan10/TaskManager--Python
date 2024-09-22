@@ -27,13 +27,12 @@ def removeTask():
 # Main Function
 while True:
 
-    #Starting Display
-    print("\nPick One Action (Number Only): ")
-    print("--------------------------------------------")
-    print("1. Add a New Task")
-    print("2. Delete a Task")
-    print("3. List Of My Tasks")
-    print("4. Exit Task Manager")
+    count = 0
+    picks = ["1. Add a New Task","2. Delete a Task","3. List Of My Tasks","4. Exit Task Manager"]
+    for i in picks:
+        print(picks[count])
+        count += 1
+    
 
     #Actions 
     try:
